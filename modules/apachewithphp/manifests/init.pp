@@ -28,8 +28,8 @@ class apachewithphp{
 		require => Package["apache2"],
 	}
 
-        file {"/etc/apache2/mods-available/php5.conf":
-                content => template("apachewithphp/php5.conf.erb"),
+        file {"/etc/apache2/mods-available/php7.conf":
+                content => template("apachewithphp/php7.conf.erb"),
                 require => Package["apache2"],
                 notify => Service["apache2"],
         }
